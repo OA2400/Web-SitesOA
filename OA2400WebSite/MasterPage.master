@@ -4,11 +4,11 @@
 
 <html>
 <head runat="server">
-    <title>אתר</title>
+    <title>האתר הראשון שלי</title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-        img gallery{
+        img.gallery{
             width:55px;
             height:40px;
         }
@@ -20,7 +20,33 @@
         <table border="1" style="width:90%; height:600px">
         <tr height="100px">
             <td>
-                
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/גלריה.png" />
+                 </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/אודות.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/דף%20הבית.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/הרשמה.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/חיפוש.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/יציאה.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/כניסה.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/מנהל.png" />
+                </a>
+                <a href="Home.aspx">
+                    <img class="gallery" src="Images/עדכון%20פרטים.png" />
+                </a>
             </td>
         </tr>
         <tr>
