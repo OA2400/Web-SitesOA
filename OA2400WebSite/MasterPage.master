@@ -20,33 +20,35 @@
         <table border="1" style="width:90%; height:600px">
         <tr height="100px">
             <td>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/גלריה.png" />
+                <center>
+                <a href="Gallery.aspx">
+                    <img class="gallery" src="../Images/גלריה.png" style="width:100px; height:50px;" />
                  </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/אודות.png" />
+                <a href="About.aspx">
+                    <img class="gallery" src="../Images/אודות.png" style="width:100px; height:50px;" />
                 </a>
                 <a href="Home.aspx">
-                    <img class="gallery" src="Images/דף%20הבית.png" />
+                    <img class="gallery" src="../Images/דף%20הבית.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/הרשמה.png" />
+                <a href="Signup.aspx">
+                    <img class="gallery" src="../Images/הרשמה.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/חיפוש.png" />
+                <a href="Search.aspx">
+                    <img class="gallery" src="../Images/חיפוש.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/יציאה.png" />
+                <a href="Exit.aspx">
+                    <img class="gallery" src="../Images/יציאה.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/כניסה.png" />
+                <a href="Default.aspx">
+                    <img class="gallery" src="../Images/כניסה.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/מנהל.png" />
+                <a href="Manager.aspx">
+                    <img class="gallery" src="../Images/מנהל.png" style="width:100px; height:50px;" />
                 </a>
-                <a href="Home.aspx">
-                    <img class="gallery" src="Images/עדכון%20פרטים.png" />
+                <a href="Details.aspx">
+                    <img class="gallery" src="../Images/עדכון%20פרטים.png" style="width:100px; height:50px;" />
                 </a>
+                    </center>
             </td>
         </tr>
         <tr>
