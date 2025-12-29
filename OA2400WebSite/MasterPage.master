@@ -16,7 +16,7 @@
 </head>
 <body dir="rtl" style="background-color:lightgray"> 
     <center>
-         <h1>master start</h1>
+        <h1>Oran's Project</h1>
         <table border="1" style="width:90%; height:600px">
         <tr height="100px">
             <td>
@@ -58,7 +58,6 @@
             </td>
         </tr>
     </table>
-    <h1> masterEnd</h1>
     </center>
 </body>
 </html>
