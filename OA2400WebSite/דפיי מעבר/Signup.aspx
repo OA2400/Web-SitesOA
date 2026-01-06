@@ -9,17 +9,17 @@
     <form name="formPage" method="post" runat="server">
         שם מלא: <input type="text" name="firstname" id="firstname" placeholder="example">
         <br />
-        Gmail: <input type="text" name="firstname" id="firstname" placeholder="example">
+        Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
         <br />
-        סיסמה: <input type="text" name="firstname" id="firstname" placeholder="example">
+        סיסמה: <input type="password" name="password" id="password" placeholder="example">
         <br />
         מדינות אהובות: 
         <br />
-        ישראל<input type="checkbox" name="check2"  value="ישראל" id="check_1"><br />
-        ארה"ב: <input type="checkbox" name="check2" value="ארהב" id="check_2"><br />
-        צרפת<input type="checkbox" name="check2" value="צרפת" id="check_3"><br />
-        יפן: <input type="checkbox" name="check2" value="יפן" id="check_4"><br />
-        אחר: <textarea rows="1" cols="10" name="textarea1" id="textarea1" placeholder="הכנס מדינה אחרת"></textarea>>
+        ישראל<input type="checkbox" name="Israel"  value="ישראל" id="Israel"><br />
+        ארה"ב: <input type="checkbox" name="USA" value="ארהב" id="USA"><br />
+        צרפת<input type="checkbox" name="France" value="צרפת" id="France"><br />
+        יפן: <input type="checkbox" name="Japan" value="יפן" id="Japan"><br />
+        אחר: <textarea rows="1" cols="10" name="Other" id="Other" placeholder="הכנס מדינה אחרת"></textarea>>
          <br />
         מה רמת הידע בדגלים: 
         <br />

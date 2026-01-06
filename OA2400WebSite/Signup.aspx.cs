@@ -13,7 +13,7 @@ public partial class Signup : System.Web.UI.Page
     public string password;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack)
+        if(IsPostBack)
         {
             name = "name:" + Request.Form["firstname"];
             Gmail = "Gmail:" + Request.Form["Gmail"];
