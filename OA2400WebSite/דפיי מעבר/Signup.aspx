@@ -15,11 +15,11 @@
         <br />
         מדינות אהובות: 
         <br />
-        ישראל<input type="checkbox" name="Israel"  value="ישראל" id="Israel"><br />
-        ארה"ב: <input type="checkbox" name="USA" value="ארהב" id="USA"><br />
-        צרפת<input type="checkbox" name="France" value="צרפת" id="France"><br />
-        יפן: <input type="checkbox" name="Japan" value="יפן" id="Japan"><br />
-        אחר: <textarea rows="1" cols="10" name="Other" id="Other" placeholder="הכנס מדינה אחרת"></textarea>>
+        ישראל<input type="checkbox" name="countries"  value="ישראל" id="Israel"><br />
+        ארה"ב: <input type="checkbox" name="countries" value="ארהב" id="USA"><br />
+        צרפת<input type="checkbox" name="countries" value="צרפת" id="France"><br />
+        יפן: <input type="checkbox" name="countries" value="יפן" id="Japan"><br />
+        אחר: <textarea rows="1" cols="10" name="countries" id="Other" placeholder="הכנס מדינה אחרת"></textarea>
          <br />
         מה רמת הידע בדגלים: 
         <br />
@@ -38,6 +38,7 @@
         <br />
         <input id="Submit1" type="submit" value="שלח" />
    </form>
+        <%=strResult %>
         </center>
 </asp:Content>
 

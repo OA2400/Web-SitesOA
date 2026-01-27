@@ -19,7 +19,7 @@
         ארה"ב: <input type="checkbox" name="USA" value="ארהב" id="USA"><br />
         צרפת<input type="checkbox" name="France" value="צרפת" id="France"><br />
         יפן: <input type="checkbox" name="Japan" value="יפן" id="Japan"><br />
-        אחר: <textarea rows="1" cols="10" name="Other" id="Other" placeholder="הכנס מדינה אחרת"></textarea>>
+        אחר: <textarea rows="1" cols="10" name="Other" id="Other" placeholder="הכנס מדינה אחרת"></textarea>
          <br />
         מה רמת הידע בדגלים: 
         <br />
