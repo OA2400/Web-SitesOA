@@ -11,6 +11,7 @@ public partial class Signup : System.Web.UI.Page
     public string strResult;
     protected void Page_Load(object sender, EventArgs e)
     {
+       
         if (Page.IsPostBack)
         {
             string fullName = Request.Form["firstname"];
@@ -20,19 +21,32 @@ public partial class Signup : System.Web.UI.Page
             string knowledgeLevel = Request.Form["radio1"];
             string age = Request.Form["age"];
 
-            string sqlInsert = "INSERT INTO tUsers values(" +
-                   "N'" + fullName + "', " +
-                   "N'" + gmail + "', " +
-                   "N'" + password + "', " +
-                   "N'" + countries + "', " +
-                   "N'" + knowledgeLevel + "', " +
-                   age + ")";
 
-            MyAdoHelper.DoQuery("MyDB.MDF", sqlInsert);
+            String sqlCheck =
+             "SELECT * FROM tUsers WHERE Gmail = N'" + gmail + "'";
+            bool exists = MyAdoHelper.IsExist(sqlCheck);
+            if (exists)
+            {
+                strResult = "מייל שהוכנס קיים במערכת, הכנס אימייל חדש";
+            }
+            else
+            {
 
-            strResult = "נרשמת בהצלחה";
+
+                string sqlInsert = "INSERT INTO tUsers values(" +
+                       "N'" + fullName + "', " +
+                       "N'" + gmail + "', " +
+                       "N'" + password + "', " +
+                       "N'" + countries + "', " +
+                       "N'" + knowledgeLevel + "', " +
+                       age + ")";
+
+                MyAdoHelper.DoQuery("MyDB.MDF", sqlInsert);
+                //strResult = "נרשמת בהצלחה";
+                Response.Redirect("Home.aspx");
+            }
+         
 
         }
-
     }
 }

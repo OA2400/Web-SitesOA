@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
-public partial class Signup : System.Web.UI.Page
+public partial class Form : System.Web.UI.Page
 {
     public string name;
     public string Gmail;
