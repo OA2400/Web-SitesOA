@@ -1,8 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Manager.aspx.cs" Inherits="דפיי_מעבר_Manager" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Manager.aspx.cs" Inherits="Manager" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <center>
     <h1>מנהל</h1>
+    <form name="formPage" method="post" runat="server">
+        Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
+        <br />
+        סיסמה: <input type="password" name="password" id="password" placeholder="example">
+        <br />
+        <input id="Submit1" type="submit" value="שלח" />
+   </form>
+    
+    <%=st %>
+        </center>
 </asp:Content>
 
