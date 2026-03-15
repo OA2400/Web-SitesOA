@@ -20,6 +20,10 @@ public partial class Manager : System.Web.UI.Page
                            " WHERE Gmail = N'" + Gmail + "'" +
                             "AND UserPassword = N'" + pass + "'";
 
+            string sql1 = "SELECT * FROM tUsers WHERE" +
+                "Gmail LIKE N'%" + Gmail + "%' AND " +
+                "UserPassword LIKE N'%" + pass + "%'";
+
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
             if (dt.Rows.Count == 0)
             {
