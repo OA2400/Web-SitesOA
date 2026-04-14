@@ -4,7 +4,8 @@
 
 <html>
 <head runat="server">
-    <title>האתר הראשון שלי</title>
+    <title>Flags</title>
+    <%=Session["Gmail"]%>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>

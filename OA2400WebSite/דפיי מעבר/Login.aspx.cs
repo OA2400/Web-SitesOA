@@ -14,10 +14,12 @@ public partial class Login : System.Web.UI.Page
 
             if (Gmail == "oranmanager@gmail.com" && pass == "manager1234")
             {
+                Session["Gmail"] = "אורן המנהל";
                 Response.Redirect("Manager.aspx");
             }
             else
             {
+                Session["Gmail"] = "משתמש רשום";
                 string sql =
                     "SELECT * FROM tUsers" +
                     " WHERE Gmail = N'" + Gmail + "'" +
@@ -26,6 +28,7 @@ public partial class Login : System.Web.UI.Page
                 bool userExists = MyAdoHelper.IsExist(sql);
                 if (!userExists)
                 {
+                    Session["Gmail"] = "אורח";
                     st = "אימייל או סיסמה שגויים";
                 }
                 else
