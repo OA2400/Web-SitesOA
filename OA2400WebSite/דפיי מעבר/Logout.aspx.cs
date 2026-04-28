@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class דפיי_מעבר_Exit : System.Web.UI.Page
+public partial class דפיי_מעבר_Logout : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

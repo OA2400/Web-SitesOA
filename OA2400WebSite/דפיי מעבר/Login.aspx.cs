@@ -14,25 +14,27 @@ public partial class Login : System.Web.UI.Page
 
             if (Gmail == "oranmanager@gmail.com" && pass == "manager1234")
             {
+                Session["nihol"] = "ok";
                 Session["Gmail"] = "אורן המנהל";
                 Response.Redirect("Manager.aspx");
             }
             else
             {
-                Session["Gmail"] = "משתמש רשום";
+               
                 string sql =
                     "SELECT * FROM tUsers" +
                     " WHERE Gmail = N'" + Gmail + "'" +
                     "AND UserPassword = N'" + pass + "'";
+                System.Data.DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
-                bool userExists = MyAdoHelper.IsExist(sql);
-                if (!userExists)
+                if(dt.Rows.Count == 0)
                 {
-                    Session["Gmail"] = "אורח";
-                    st = "אימייל או סיסמה שגויים";
+                    st = "אין נתונים";
                 }
                 else
                 {
+                    Session["user"] = "ok";
+                    Session["Gmail"] = dt.Rows[0]["Gmail"];
                     Response.Redirect("Home.aspx");
                 }
             }
