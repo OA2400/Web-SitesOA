@@ -11,20 +11,22 @@ public partial class Manager : System.Web.UI.Page
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
+        String sql = "";
         if (IsPostBack)
         {
             string Gmail = Request.Form["Gmail"];
             string pass = Request.Form["password"];
 
-            string sql = "SELECT * FROM tUsers" +
+            sql = "SELECT * FROM tUsers" +
                            " WHERE Gmail = N'" + Gmail + "'" +
                             "AND UserPassword = N'" + pass + "'";
-
-            string sql1 = "SELECT * FROM tUsers WHERE" +
-                "Gmail LIKE N'%" + Gmail + "%' AND " +
-                "UserPassword LIKE N'%" + pass + "%'";
-
-            DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+        }
+        else
+        {
+            // אם רק נכנסנו לדף, נציג את כל המשתמשים
+            sql = "SELECT * FROM tUsers";
+        }
+        DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
             if (dt.Rows.Count == 0)
             {
                 st = "אין נתונים ";
@@ -57,4 +59,3 @@ public partial class Manager : System.Web.UI.Page
             }
         }
     }
-}

@@ -18,15 +18,13 @@ public partial class Orders : System.Web.UI.Page
             string fSize = Request.Form["size"];
             string fAddr = Request.Form["address"];
 
-            string sqlInsert = "INSERT INTO tProducts (fullName, flagName, count, size, address) VALUES (" +
+            string sqlInsert = "INSERT INTO tProducts (fullName, flagName, [count], size, address) VALUES (" +
                 "N'" + fName + "', " +
                 "N'" + fFlag + "', " +
                 fCount + ", " +
                 "N'" + fSize + "', " +
-                "N'" + fAddr + "'" +
-                ")";
+                "N'" + fAddr + "')";
 
-            // וודא שזה השם המדויק של קובץ ה-MDF שלך
             MyAdoHelper.DoQuery("MyDB.MDF", sqlInsert);
 
             strResult = "ההזמנה עבור " + fName + " נשמרה בהצלחה!";

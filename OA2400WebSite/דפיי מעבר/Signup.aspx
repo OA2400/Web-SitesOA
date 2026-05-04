@@ -6,7 +6,7 @@
     <center>
 
        <h1>הרשמה</h1>
-    <form name="formPage" method="post" runat="server">
+  
         שם מלא: <input type="text" name="firstname" id="firstname" placeholder="example">
         <br />
         Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
@@ -29,15 +29,14 @@
         מתקדם מאוד<input type="radio" name="radio1" value="מתקדם מאוד" id="radio_4">
         <br />
         <select name="age" id="age">
-            <option value="0">כמה דגלים אתה חושב שאתה יודע</option>
-            <option value="0">0 - 10</option>
-            <option value="10">10 - 30</option>
-            <option value="30">30 - 60</option>
+            <option value="0">גיל</option>
+            <option value="10">0 - 10</option>
+            <option value="11">11 - 18</option>
+            <option value="19">19 - 60</option>
             <option value="60">60+</option>
         </select>
         <br />
         <input id="Submit1" type="submit" value="שלח" />
-   </form>
         <%=strResult %>
         </center>
 </asp:Content>
