@@ -22,7 +22,7 @@
     </style>
 </head>
 <body dir="rtl" style="background-color:lightgray"> 
-    <form id="form1" runat="server">
+    
         <center>
             <h1>Oran's Project</h1>
             <table border="1" style="width:90%; height:600px">
@@ -67,6 +67,5 @@
                 </tr>
             </table>
         </center>
-    </form>
 </body>
 </html>

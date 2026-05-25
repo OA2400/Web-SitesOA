@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <form id="form1" runat="server">
     <center>
     <h1>מנהל</h1>
         Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
@@ -14,5 +15,6 @@
     
     <%=st %>
         </center>
+        </form>
 </asp:Content>
 
