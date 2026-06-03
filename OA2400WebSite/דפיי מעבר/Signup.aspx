@@ -10,67 +10,73 @@
 
             result = true;
 
-            if (!checkFirstName)
+            if (!checkFirstName())
                 result = false;
 
-            if (!checkGmail)
+            if (!checkGmail())
                 result = false;
 
-            if (!checkPassword)
+            if (!checkPassword())
                 result = false;
 
-            if (!checkOther)
+            if (!checkOther())
                 result = false;
 
             return result;
         }
         function checkFirstName() {
-            name = .getElementById("firstname").value;
+            name = document.getElementById("firstname").value;
 
-            if (name.length > 2) {
-                firstnameErr.innerHTML = "שם חייב להיות יותר משני תווים";
+            if (name.length < 2) {
+                firstnameErr.innerHTML = "שם חייב להכיל יותר משני תווים";
                 return false;
             }
-            if (name.length < 12) {
+            if (name.length > 12) {
                 firstnameErr.innerHTML = "שם לא יכול להכיל יותר משנים עשר תווים";
                 return false;
+            }
+            for (i = 0; i < name.length; i++) {  
+                if (name[i] >= '0' && name[i] <= '9') {
+                    firstnameErr.innerHTML = "שם לא יכול להכיל מספרים";
+                    return false;
+                }
             }
             return true;
         }
         function checkGmail() {
-            gmail = .getElementById("gamil").value;
+            Gmail = document.getElementById("Gmail").value;
 
-            if (gmail.length > 5) {
-                gmailErr.innerHTML = "אימייל חייב להיות יותר מחמישה תווים";
+            if (Gmail.length < 6) {
+                gmailErr.innerHTML = "אימייל חייב להכיל יותר משישה תווים";
                 return false;
             }
-            if (gmail.length < 18) {
-                gmailErr.innerHTML = "אימייל לא יכול להכיל יותר משמונה עשר תווים";
+            if (Gmail.length > 50) {
+                gmailErr.innerHTML = "אימייל לא יכול להכיל יותר מחמישים תווים";
                 return false;
             }
             return true;
         }
         function checkPassword() {
-            password = .getElementById("password").value;
+            password = document.getElementById("password").value;
 
-            if (password.length > 4) {
-                passwordErr.innerHTML = "סיסמה חייבת להיות יותר מארבעה תווים";
+            if (password.length < 4) {
+                passwordErr.innerHTML = "סיסמה חייבת להכיל יותר מארבעה תווים";
                 return false;
             }
-            if (password.length < 12) {
+            if (password.length > 12) {
                 passwordErr.innerHTML = "סיסמה לא יכולה להכיל יותר משנים עשר תווים";
                 return false;
             }
             return true;
         }
         function checkOther() {
-            other = .getElementById("other").value;
+            other = document.getElementById("Other").value;
 
-            if (other.length > 2) {
-                otherErr.innerHTML = "שם של מדינה אחרת חייב להיות יותר משני תווים";
+            if (other.length < 2 && other.length > 0) {
+                otherErr.innerHTML = "שם של מדינה אחרת חייב להכיל יותר משני תווים";
                 return false;
             }
-            if (other.length < 15) {
+            if (other.length > 15) {
                 otherErr.innerHTML = "שם של מדינה אחרת לא יכול להכיל יותר מחמישה עשר תווים";
                 return false;
             }
@@ -83,13 +89,13 @@
     <center>
        <h1>הרשמה</h1>
   
-        שם מלא: <input type="text" name="firstname" id="firstname" placeholder="example"> 
+        שם מלא: <input type="text" name="firstname" id="firstname"> 
         <span id="firstnameErr"></span>
         <br />
-        Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
+        Gmail: <input type="text" name="Gmail" id="Gmail">
         <span id="gmailErr"></span>
         <br />
-        סיסמה: <input type="password" name="password" id="password" placeholder="example">
+        סיסמה: <input type="password" name="password" id="password">
             <span id="passwordErr"></span>
         <br />
         מדינות אהובות: 

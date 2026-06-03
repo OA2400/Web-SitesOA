@@ -6,9 +6,9 @@
     <form id="form1" runat="server">
         <center>
     <h1>כניסה</h1>
-        Gmail: <input type="text" name="Gmail" id="Gmail" placeholder="example">
+        Gmail: <input type="text" name="Gmail" id="Gmail">
         <br />
-        סיסמה: <input type="password" name="password" id="password" placeholder="example">
+        סיסמה: <input type="password" name="password" id="password">
         <br />
         <input id="Submit1" type="submit" value="שלח" />
         <hr />

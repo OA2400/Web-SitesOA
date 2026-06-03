@@ -16,6 +16,7 @@ public partial class Login : System.Web.UI.Page
             {
                 Session["nihol"] = "ok";
                 Session["Gmail"] = "אורן המנהל";
+                Session["FirstName"] = "אורן המנהל";
                 Response.Redirect("Manager.aspx");
             }
             else
@@ -29,12 +30,12 @@ public partial class Login : System.Web.UI.Page
 
                 if(dt.Rows.Count == 0)
                 {
-                    st = "אין נתונים";
+                    st = "מייל זה אינו קיים במערכת יש ליצור משתמש חדש";
                 }
                 else
                 {
                     Session["user"] = "ok";
-                    Session["Gmail"] = dt.Rows[0]["Gmail"];
+                    Session["FirstName"] = dt.Rows[0]["firstName"];
                     Response.Redirect("Home.aspx");
                 }
             }

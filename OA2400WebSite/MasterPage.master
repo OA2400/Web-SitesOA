@@ -4,7 +4,12 @@
 <html>
 <head runat="server">
     <title>Flags</title>
-    <%=Session["Gmail"]%>
+שלום 
+<% if (Session["FirstName"] != null) { %>
+    <%=Session["FirstName"]%>
+<% } else { %>
+    אורח
+<% } %>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
@@ -24,7 +29,7 @@
 <body dir="rtl" style="background-color:lightgray"> 
     
         <center>
-            <h1>Oran's Project</h1>
+            <h1>Oran's Flags</h1>
             <table border="1" style="width:90%; height:600px">
                 <tr height="100px">
                     <td>
@@ -38,15 +43,16 @@
 
                             <%if (Session["nihol"] != "ok" && Session["user"] != "ok") { %>
                                 <a href="Signup.aspx"><img class="gallery" src="../Images/הרשמה.png" /></a>
+                                <a href="Home.aspx"><img class="gallery" src="../Images/דף%20הבית.png" /></a>
+                                <a href="About.aspx"><img class="gallery" src="../Images/אודות.png" /></a>
+                                <a href="Gallery.aspx"><img class="gallery" src="../Images/גלריה.png" /></a>
                             <%} %>
-
-                            <a href="Search.aspx"><img class="gallery" src="../Images/חיפוש.png" /></a>
 
                             <%if (Session["nihol"] == "ok" || Session["user"] == "ok") { %>
                                 <a href="Logout.aspx"><img class="gallery" src="../Images/יציאה.png" /></a>
                             <%} %>
 
-                            <%if (Session["nihol"] != "ok" || Session["user"] != "ok") { %>
+                            <%if (Session["nihol"] != "ok" && Session["user"] != "ok") { %>
                                 <a href="Login.aspx"><img class="gallery" src="../Images/כניסה.png" /></a>
                             <%} %>
 
@@ -54,8 +60,6 @@
                                 <a href="Manager.aspx"><img class="gallery" src="../Images/מנהל.png" /></a>
                                 <a href="ManagerOrders.aspx"><img class="gallery" src="../Images/הזמנות%20מנהל.png" /></a>
                             <%} %>
-
-                            <a href="Details.aspx"><img class="gallery" src="../Images/עדכון%20פרטים.png" /></a>
                         </center>
                     </td>
                 </tr>
